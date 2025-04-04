@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1 - Web Development Basics</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f8ff; /* Light background */
+      color: black;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px; /* Increased width */
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px gray;
+    }
+
+    header {
+      background: linear-gradient(to right, #6a11cb, #2575fc); /* Purple to blue gradient */
+      color: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: bold;
+      color: yellow; /* Different color for title */
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .social-links img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .contact-button {
+      background-color: green;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .contact-button:hover {
+      background-color: darkgreen;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px gray;
+      width: 350px;
+      text-align: center;
+    }
+
+    .modal h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .modal p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    .modal button {
+      background-color: dodgerblue;
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .modal button:hover {
+      background-color: royalblue;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome to My First Webpage!</h1>
+      <p>Created as part of Task 1 – ApexPlanet Internship</p>
+    </header>
+
+    <section>
+      <h2>About This Page</h2>
+      <p>This is a simple HTML page styled with CSS and made interactive with JavaScript. It includes my social media links and static contact information.</p>
+    </section>
+
+    <section>
+      <h2>My Favorite Image</h2>
+      <img src="nature.jpg" alt="A beautiful scenery from Unsplash">
+    </section>
+
+    <section>
+      <h2>Connect With Me</h2>
+      <div class="social-links">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+        <a href="https://www.linkedin.com/in/varshini-reddy-400214238/" target="_blank">LinkedIn</a>
+      </div>
+      <div class="social-links">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo">
+        <a href="https://github.com/VarshiniReddy05" target="_blank">GitHub</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact Me</h2>
+      <button class="contact-button" onclick="showContactInfo()">Show Contact Info</button>
+    </section>
+
+    <!-- Modal Box -->
+    <div id="contactModal" class="modal">
+      <h3>Contact Details</h3>
+      <p>📧 Email: momulavarshini.com</p>
+      <p>📞 Phone: +123 456 7890</p>
+      <p>📍 Location: Hyderabad, India</p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function showContactInfo() {
+      document.getElementById("contactModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("contactModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
